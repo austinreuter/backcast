@@ -13,10 +13,6 @@ var AppView = Backbone.View.extend({
     search.render();
 
     this.videos.on('select', this.videoChange, this);
-    this.videos.on('reset', () => {
-      videoList.render();
-      videoPlayer.render();
-    }, this);
   },
 
 
