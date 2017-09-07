@@ -7,18 +7,18 @@ var AppView = Backbone.View.extend({
     this.render();
     this.videos.search('puppies');
 
-    const videoList = new VideoListView({el: $('#list'), collection: this.videos});
-    const videoPlayer = new VideoPlayerView({el: $('#player'), collection: this.videos});
-    const search = new SearchView({el: $('#search'), collection: this.videos});
+    const videoList = new VideoListView({el: $('#list'), collection: this.videos})
+    // videoList.render();
+    const videoPlayer = new VideoPlayerView({el: $('#player'), collection: this.videos})
+    // videoPlayer.render();
+    const search = new SearchView({el: $('#search'), collection: this.videos})
     search.render();
 
-    this.videos.on('select', () => {
-      this.videoChange();
-    }, this);
+    this.videos.on('select', this.videoChange, this);
     this.videos.on('reset', () => {
       videoList.render();
       videoPlayer.render();
-    }, this);
+    }, this)
   },
 
 
