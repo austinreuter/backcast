@@ -8,9 +8,9 @@ var AppView = Backbone.View.extend({
     this.videos.search('puppies');
 
     const videoList = new VideoListView({el: $('#list'), collection: this.videos})
-    videoList.render();
+    // videoList.render();
     const videoPlayer = new VideoPlayerView({el: $('#player'), collection: this.videos})
-    videoPlayer.render();
+    // videoPlayer.render();
     const search = new SearchView({el: $('#search'), collection: this.videos})
     search.render();
 
