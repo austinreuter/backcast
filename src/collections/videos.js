@@ -2,6 +2,12 @@ var Videos = Backbone.Collection.extend({
 
   model: Video,
 
+  initialize: function(video) {
+    this.on('sync', () => {
+      this.at(0).select();
+    });
+  },
+
   search: function(text= '') {
     let obj = {};
     obj.q = text;
