@@ -17,8 +17,8 @@ var Videos = Backbone.Collection.extend({
       data: obj,
       success: (data) => {
         const dataArr = this.parse(data);
-        // this.reset(dataArr);
-        this.renderAll(dataArr);
+        this.reset(dataArr);
+        // this.renderAll(dataArr);
       },
       error: function(data) {
         console.log('error:', data);
@@ -38,8 +38,8 @@ var Videos = Backbone.Collection.extend({
     // // newVideoCollection.on('select', this.videoChange, this);
     // this.newVideos.on('select', this.videoChange, this);
 
-    window.exampleVideoData = array;
-    new AppView();
+    // window.exampleVideoData = array;
+    // new AppView();
   }
 
 });
