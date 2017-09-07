@@ -18,12 +18,12 @@ var AppView = Backbone.View.extend({
     this.$el.html(this.template());
     return this;
   },
-
+/*
   videoChange: function(e) {
     const cur = new Videos(e);
     new VideoPlayerView({el: $('#player'), collection: cur}).render();
   },
-
+*/
   template: templateURL('src/templates/app.html')
 
 });
