@@ -5,10 +5,9 @@ var AppView = Backbone.View.extend({
   initialize: function() {
     this.videos = new Videos(window.exampleVideoData);
     this.render();
-    
+
     new VideoListView({el: $('#list'), collection: this.videos}).render();
     new VideoPlayerView({el: $('#player'), collection: this.videos}).render();
-
     new SearchView({el: $('#search'), collection: this.videos}).render();
 
     this.videos.on('select', this.videoChange, this);
