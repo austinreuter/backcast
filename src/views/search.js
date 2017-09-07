@@ -15,7 +15,7 @@ var SearchView = Backbone.View.extend({
   },
 
   handleEnter: function(e) {
-    if (e.keyCode !== 13) { return; }
+    // if (e.keyCode !== 13) { return; }
     const text = this.$('input').val();
     this.collection.search(text);
   },

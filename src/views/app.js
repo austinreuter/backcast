@@ -12,7 +12,7 @@ var AppView = Backbone.View.extend({
     const search = new SearchView({el: $('#search'), collection: this.videos});
     search.render();
 
-    this.videos.on('select', this.videoChange, this);
+    // this.videos.on('select', this.videoChange, this);
   },
 
 
