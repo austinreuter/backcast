@@ -32,7 +32,8 @@
 
   <script>
     backboneReady(() => {
-      // const videos = new Videos(exampleVideoData);
+      const videos = new Videos(exampleVideoData);
+      videos.search('puppies');
       new AppView();
       // new AppView();
     });
