@@ -17,6 +17,7 @@ var Videos = Backbone.Collection.extend({
       data: obj,
       success: (data) => {
         const dataArr = this.parse(data);
+        // this.reset(dataArr);
         this.renderAll(dataArr);
       },
       error: function(data) {
