@@ -45,8 +45,11 @@ describe('AppView', function() {
 
     it('should select the first video once new videos are loaded', function() {
       var model = view.videos.at(0);
+      console.log('TEST CALLED');
       sinon.spy(model, 'select');
+      console.log('SYNC START');
       view.videos.trigger('sync');
+      console.log('SYNC END');
       expect(model.select).to.have.been.called;
     });
 
