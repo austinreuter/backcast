@@ -3,7 +3,6 @@ var Videos = Backbone.Collection.extend({
   model: Video,
 
   search: function(text= '') {
-    console.log('api', window.YOUTUBE_API_KEY);
     let obj = {};
     obj.q = text;
     obj.key = window.YOUTUBE_API_KEY;
