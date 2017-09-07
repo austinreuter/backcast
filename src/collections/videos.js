@@ -30,7 +30,7 @@ var Videos = Backbone.Collection.extend({
       }
     });
 
-  }, 500, true),
+  }, 500),
 
   parse: function(data) {
     return data.items;
