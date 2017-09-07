@@ -1,6 +1,6 @@
 var VideoPlayerView = Backbone.View.extend({
   initialize: function() {
-    this.render();
+    this.collection.on('sync', this.render, this);
   },
 
   render: function() {

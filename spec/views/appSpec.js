@@ -29,6 +29,7 @@ describe('AppView', function() {
   });
 
   it('should render a VideoList view', function() {
+    // view.videos.trigger('sync');
     expect(VideoListView.prototype.render).to.have.callCount(1);
   });
 
